@@ -25,8 +25,11 @@ class MainActivityA : AppCompatActivity() {
 
 
   private fun initListeners(){
+
     binding.btnNext.setOnClickListener {
-      startActivity(Intent(this, MainActivityB::class.java))
+      val intent = Intent(this, MainActivityB::class.java)
+      intent.putExtra("user", User("Kauê Murakami", 29))
+      startActivity(intent)
     }
   }
 
