@@ -18,8 +18,10 @@ class MainActivityA : AppCompatActivity() {
     binding = ActivityMainABinding.inflate(layoutInflater)
     enableEdgeToEdge()
     setContentView(binding.root)
+    Log.i("A", "oncreate")
     initListeners()
   }
+
 
 
   private fun initListeners(){

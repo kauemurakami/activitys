@@ -1,5 +1,6 @@
 package com.example.activitysandfragments
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -15,5 +16,13 @@ class MainActivityB : AppCompatActivity() {
     binding = ActivityMainBBinding.inflate(layoutInflater)
     enableEdgeToEdge()
     setContentView(binding.root)
+    toolbar_voltar()
   }
+
+  private fun toolbar_voltar() {
+    binding.toolbarBack.setOnClickListener {
+      startActivity(Intent(this, MainActivityA::class.java))
+    }
+  }
+
 }
